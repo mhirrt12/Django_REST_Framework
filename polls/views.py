@@ -5,3 +5,5 @@ from django.http import HttpResponse
 
 def home(request):
     return HttpResponse("Welcome to Django!")
+def students(request,id):
+    return HttpResponse(f"Student ID: {id}")

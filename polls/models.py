@@ -2,7 +2,12 @@ from django.db import models
 
 # Create your models here.
 
+# from django.db import models
 
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    email = models.EmailField()
 class Product(models.Model):
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)

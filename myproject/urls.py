@@ -21,5 +21,6 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", views.home),
+    path("form/",views.add_book),
     # path("polls/", include("polls.urls")),
 ]

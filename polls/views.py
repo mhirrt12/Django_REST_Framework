@@ -4,7 +4,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 from django.shortcuts import render
+from .forms import BookForm
 
+def add_book(request):
+    form = BookForm()
+
+    return render(
+        request,
+        "book.html",
+        {"form": form}
+    )
 def home(request):
     return render(request, "polls/home.html")
 def students(request,id):

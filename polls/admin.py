@@ -12,5 +12,5 @@ class StudentAdmin(admin.ModelAdmin):
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
     list_display = ('title', 'price')
-    # search_fields = ('title',)
-    # list_filter = ('price',)
+    search_fields = ('title',)
+    list_filter = ('price',)

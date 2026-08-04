@@ -11,7 +11,7 @@ def add_book(request):
 
     return render(
         request,
-        "book.html",
+        "polls/book.html",
         {"form": form}
     )
 def home(request):

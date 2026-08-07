@@ -18,3 +18,17 @@ class BookList(APIView):
         )
 
         return Response(serializer.data)
+    
+    def post(self, request):
+
+        serializer = BookSerializer(
+            data=request.data
+        )
+
+        if serializer.is_valid():
+
+            serializer.save()
+
+            return Response(
+                serializer.data
+            )

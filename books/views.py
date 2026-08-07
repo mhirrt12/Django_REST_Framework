@@ -6,6 +6,12 @@ from rest_framework.response import Response
 class BookList(APIView):
 
     def get(self, request):
-        return Response({
-            "message": "Hello from Book API"
-        })
+
+        books = Book.objects.all()
+
+        serializer = BookSerializer(
+            books,
+            many=True
+        )
+
+        return Response(serializer.data)
